@@ -78,7 +78,7 @@ public class Board {
             Cell cell = pointers[j].getCell();
             if (cell != null && cell.isEmpty()) {
                 addDisc(j, computer);
-                value = miniMax(difficultyLevel.getDepth(), -Integer.MAX_VALUE, Integer.MAX_VALUE, false) + new Random().nextInt(100);
+                value = miniMax(difficultyLevel.getDepth(), -Integer.MAX_VALUE, Integer.MAX_VALUE, false);
                 removeDisc(j);
                 System.out.println("{" + j + "," + cell.getI() + "}" + "{score:" + value + "}");
                 if (value > bestMove) {
@@ -245,7 +245,7 @@ public class Board {
                 Cell cell = pointers[j].getCell();
                 if (cell != null && cell.isEmpty()) {
                     addDisc(j, computer);
-                    val = miniMax(depth - 1, alpha, beta, false) + new Random().nextInt(100);
+                    val = miniMax(depth - 1, alpha, beta, false);
                     bestMove = Math.max(bestMove, val);
                     removeDisc(j);
                     alpha = Math.max(alpha, val);
@@ -265,7 +265,7 @@ public class Board {
                 Cell cell = pointers[j].getCell();
                 if (cell != null && cell.isEmpty()) {
                     addDisc(j, this.player);
-                    val = miniMax(depth - 1, alpha, beta, true) + new Random().nextInt(100);
+                    val = miniMax(depth - 1, alpha, beta, true);
                     bestMove = Math.min(bestMove, val);
                     removeDisc(j);
                     beta = Math.min(beta, val);
@@ -379,7 +379,7 @@ public class Board {
     }
 
     public void start(GameFinished gameFinished) {
-//        bestMove(gameFinished);
-//        check(gameFinished);
+        bestMove(gameFinished);
+        check(gameFinished);
     }
 }
