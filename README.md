@@ -1,10 +1,14 @@
-# Connect 4
+# Connect4
+
+An implementation of Minimax AI Algorithm on Connect4
 
 Connect 4 one of the most famous puzzle game.
 
 Creating AI player using minimax algorithm.
 
-This is a UI application written in Java you can play the game by downloading the project and import it to intelliJ IDEA.
+This is a UI application written in Java, You can play the game by downloading the project and import it to intelliJ IDEA.
+
+you can find the rules of the game [Connect4 - WikiPedia](https://en.wikipedia.org/wiki/Connect_Four/)
 
 ### There is 3 diffrent levels 
 
